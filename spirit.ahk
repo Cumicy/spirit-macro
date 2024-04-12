@@ -18,7 +18,7 @@ ToggleScript1:
     Toggle1 := !Toggle1
     If (Toggle1)
     {
-        Countdown1 := 3 ; Reset countdown to 3 when starting
+        Countdown1 := 3 ;
         GuiControl,, CountdownText1, Countdown: %Countdown1%
         SetTimer, StartCountdown1, 1000  ; 
         GuiControl,, 1, Toggle (On)
