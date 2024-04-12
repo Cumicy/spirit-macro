@@ -11,7 +11,7 @@ Gui, Add, Button, x60 y100 w200 h40 gToggleScript2, Power Training
 Gui, Add, Text, x60 y140 w200 h30 Center vCountdownText2, Countdown: %Countdown2%
 Gui, Add, Button, x60 y180 w200 h40 gToggleScript3, Endurance Training
 Gui, Add, Text, x60 y220 w200 h30 Center vCountdownText3, Countdown: %Countdown3%
-Gui, Show, w320 h300, Spirit macro   ; Change "Spirit macro" to your desired name
+Gui, Show, w320 h300, Spirit macro   ; 
 return
 
 ToggleScript1:
@@ -20,7 +20,7 @@ ToggleScript1:
     {
         Countdown1 := 3 ; Reset countdown to 3 when starting
         GuiControl,, CountdownText1, Countdown: %Countdown1%
-        SetTimer, StartCountdown1, 1000  ; Start countdown timer
+        SetTimer, StartCountdown1, 1000  ; 
         GuiControl,, 1, Toggle (On)
     }
     Else
@@ -34,9 +34,9 @@ ToggleScript2:
     Toggle2 := !Toggle2
     If (Toggle2)
     {
-        Countdown2 := 5 ; Reset countdown to 5 when starting
+        Countdown2 := 5 ; 
         GuiControl,, CountdownText2, Countdown: %Countdown2%
-        SetTimer, StartCountdown2, 1000  ; Start countdown timer
+        SetTimer, StartCountdown2, 1000  ; 
         GuiControl,, 2, Toggle (On)
     }
     Else
@@ -50,9 +50,9 @@ ToggleScript3:
     Toggle3 := !Toggle3
     If (Toggle3)
     {
-        Countdown3 := 5 ; Reset countdown to 5 when starting
+        Countdown3 := 5 ; 
         GuiControl,, CountdownText3, Countdown: %Countdown3%
-        SetTimer, StartCountdown3, 1000  ; Start countdown timer
+        SetTimer, StartCountdown3, 1000  ; 
         GuiControl,, 3, Toggle (On)
     }
     Else
@@ -63,90 +63,90 @@ ToggleScript3:
 return
 
 StartCountdown1:
-    Countdown1-- ; Decrease countdown by 1
+    Countdown1-- ;
     GuiControl,, CountdownText1, Countdown: %Countdown1%
     If (Countdown1 = 0)
     {
         SetTimer, StartCountdown1, Off
-        SetTimer, PerformAction1, 1000  ; Start performing actions
+        SetTimer, PerformAction1, 1000  ; 
     }
 return
 
 PerformAction1:
-    Send, e    ; Presses the 'e' key
-    Sleep, 420    ; Waits for 0.315 seconds (adjust as needed)
-    Click    ; Left click
-    Send, e    ; Presses the 'e' key again
-    Sleep, 320    ; Waits for 0.315 seconds (adjust as needed)
-    Click    ; Left click
-    Send, 1    ; Presses the 'e' key
+    Send, e    ; 
+    Sleep, 420    ; 
+    Click    ; 
+    Send, e    ; 
+    Sleep, 320    ; 
+    Click    ;
+    Send, 1    ; 
     Send, {Space}
     Send, {Space}
     Send, {Space}
     Sleep, 2000    ;
-    Send, 1    ; Presses the 'e' key 
-    UpdateCountdown1()  ; Update countdown display
+    Send, 1    ; 
+    UpdateCountdown1()  ;
 return
 
 UpdateCountdown1() {
-    ; No need to update countdown during macro execution
+    ; 
 }
 
 StartCountdown2:
-    Countdown2-- ; Decrease countdown by 1
+    Countdown2-- ; 
     GuiControl,, CountdownText2, Countdown: %Countdown2%
     If (Countdown2 = 0)
     {
         SetTimer, StartCountdown2, Off
-        SetTimer, PerformAction2, 1000  ; Start performing actions
+        SetTimer, PerformAction2, 1000  ; 
     }
 return
 
 PerformAction2:
-    Send, e            ; Presses the 'e' key
-    Sleep, 400        ; Waits for 0.315 seconds (adjust as needed)
-    Click down         ; Holds down the left mouse button
-    Sleep, 850        ; Holds the left mouse button for 1 second (adjust as needed)
-    Click up           ; Releases the left mouse button
-    Send, e            ; Presses the 'e' key again
+    Send, e            ; 
+    Sleep, 400        ; 
+    Click down         ; 
+    Sleep, 850        ; 
+    Click up           ; 
+    Send, e            ; 
     Send, {Space}
     Send, {Space}
     Send, {Space}
-    Sleep, 2000        ; Waits for 2 seconds (adjust as needed)
-    UpdateCountdown2()  ; Update countdown display
+    Sleep, 2000        ; 
+    UpdateCountdown2()  ; 
 return
 
 UpdateCountdown2() {
-    ; No need to update countdown during macro execution
+    ; 
 }
 
 StartCountdown3:
-    Countdown3-- ; Decrease countdown by 1
+    Countdown3-- ; 
     GuiControl,, CountdownText3, Countdown: %Countdown3%
     If (Countdown3 = 0)
     {
         SetTimer, StartCountdown3, Off
-        SetTimer, PerformAction3, 1000  ; Start performing actions
+        SetTimer, PerformAction3, 1000  ; 
     }
 return
 
 PerformAction3:
-    Send, 1            ; Presses the 'e' key
-    Send, e            ; Presses the 'e' key
-    Sleep, 600        ; Waits for 0.315 seconds (adjust as needed)
-    Click down         ; Holds down the left mouse button
-    Sleep, 850        ; Holds the left mouse button for 1 second (adjust as needed)
-    Click up           ; Releases the left mouse button
-    Send, e            ; Presses the 'e' key again
+    Send, 1            ; 
+    Send, e            ; 
+    Sleep, 600        ; 
+    Click down         ; 
+    Sleep, 850        ; 
+    Click up           ; 
+    Send, e            ; 
     Send, {Space}
     Send, {Space}
     Send, {Space}
-    Sleep, 2500        ; Waits for 2 seconds (adjust as needed)
-    UpdateCountdown3()  ; Update countdown display
+    Sleep, 2500        ; 
+    UpdateCountdown3()  ; 
 return
 
 UpdateCountdown3() {
-    ; No need to update countdown during macro execution
+    ; 
 }
 
 GuiClose:
